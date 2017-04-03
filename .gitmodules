@@ -1,0 +1,3 @@
+[submodule "svgcleaner"]
+	path = svgcleaner
+	url = git@github.com:RazrFalcon/svgcleaner.git
