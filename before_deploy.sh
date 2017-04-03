@@ -3,7 +3,7 @@
 set -ex
 
 main() {
-    local src=$(pwd) \
+    local src=$(pwd)/svgcleaner \
           stage=
 
     case $TRAVIS_OS_NAME in
