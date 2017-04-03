@@ -29,8 +29,9 @@ matrix:
     # OSX
     #- env: TARGET=i686-apple-darwin
     #  os: osx
-    - env: TARGET=x86_64-apple-darwin
-      os: osx
+    # TODO: uncomment this after test
+    #- env: TARGET=x86_64-apple-darwin
+    #  os: osx
 
     # *BSD
     #- env: TARGET=i686-unknown-freebsd DISABLE_TESTS=1
