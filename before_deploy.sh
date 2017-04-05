@@ -3,6 +3,7 @@
 set -ex
 
 main() {
+    local ROOT=$(pwd)
     local src=$(pwd)/svgcleaner \
           stage=
 
@@ -23,8 +24,14 @@ main() {
     cp target/$TARGET/release/svgcleaner $stage/
 
     cd $stage
-    tar czf $src/$CRATE_NAME-$TRAVIS_TAG-$TARGET.tar.gz *
+    tar czf $CRATE_NAME-$TRAVIS_TAG-$TARGET.tar.gz *
+    cp *.tar.gz $ROOT
+    echo "BEFORE_DEPLOY: DEBUG -- LOCATION"
+    ls -la .
+    ls -la $ROOT
 
+    cd $src
+    echo "BEFORE_DEPLOY: DONE"
     rm -rf $stage
 }
 
